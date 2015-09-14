@@ -1,0 +1,27 @@
+name: ubuntu14.04-nodejs
+version: 4.0.0
+description: Ubuntu 14.04 with nodejs
+type: main
+platform: ubuntu@12.04
+script: |
+  export NODEVERSION=4.0.0
+  sudo apt-get update
+  sudo apt-get install -y update-manager-core
+  sudo do-release-upgrade -f DistUpgradeViewNonInteractive -m server -d
+  sudo apt-get install -y aptitude
+  sudo aptitude update
+  sudo aptitude safe-upgrade
+  sudo apt-get update
+  sudo apt-get install wget build-essential
+  cd $HOME
+  mkdir nodeinstall
+  cd nodeinstall
+  wget http://nodejs.org/dist/v$NODEVERSION/node-v$NODEVERSION.tar.gz
+  tar xzf node-v$NODEVERSION.tar.gz
+  cd node-v$NODEVERSION
+  ./configure
+  make
+  sudo make install
+  cd $HOME
+  rm -fr nodeinstall
+  node -v
