@@ -1,5 +1,5 @@
 name: ubuntu14.04-nodejs
-version: 4.0.1
+version: 4.0.2
 description: Ubuntu 14.04 with nodejs
 type: main
 platform: ubuntu@12.04
@@ -13,7 +13,7 @@ script: |
   sudo aptitude safe-upgrade
   sudo apt-get update
   sudo apt-get install wget build-essential
-  sudo apt-get install ruby
+  sudo apt-get install ruby git
   cd $HOME
   mkdir nodeinstall
   cd nodeinstall
