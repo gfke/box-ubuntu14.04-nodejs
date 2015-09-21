@@ -13,7 +13,7 @@ script: |
   sudo aptitude safe-upgrade
   sudo apt-get update
   sudo apt-get install wget build-essential
-  sudo apt-get install ruby git
+  sudo apt-get install ruby git curl
   cd $HOME
   mkdir nodeinstall
   cd nodeinstall
