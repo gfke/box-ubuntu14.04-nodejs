@@ -1,10 +1,10 @@
 name: ubuntu14.04-nodejs
-version: 4.1.1
+version: 4.1.2
 description: Ubuntu 14.04 with nodejs
 type: main
 platform: ubuntu@12.04
 script: |
-  export NODEVERSION=4.1.0
+  export NODEVERSION=4.1.1
   sudo apt-get update
   sudo apt-get install -y update-manager-core
   sudo do-release-upgrade -f DistUpgradeViewNonInteractive -m server -d
